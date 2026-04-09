@@ -117,10 +117,11 @@ section {
   .header-container { justify-content: flex-start; }
 }
 .brand-logo {
-  height: clamp(55px, 7vw, 80px);
+  height: clamp(72px, 10vw, 120px);
   width: auto;
   opacity: 0.95;
   filter: brightness(0) drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+  margin-bottom: 2.5rem;
 }
 
 /* O "Pill" de Autoridade Superior */
@@ -200,17 +201,19 @@ section {
 /* =========================================================================
    SEÇÃO 1: HERO
    ========================================================================= */
+
+/* A section ocupa 100vh e centraliza o conteúdo nos dois eixos */
 .s-hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;       /* eixo vertical */
+  justify-content: center;   /* eixo horizontal (reforço) */
   overflow: hidden;
   position: relative;
-  padding-top: 10vh;
+  padding: 6rem 0;           /* respiro simétrico top/bottom */
 }
 
-/* Máscara de Ocultação Cinemática do Fundo */
+/* Fundo decorativo */
 .hero-bg-wrapper {
   position: absolute;
   inset: 0;
@@ -220,27 +223,30 @@ section {
   background-size: cover;
   background-position: center;
   opacity: 0.25;
-  }
+}
 .hero-blur-layer {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.3) 0%, var(--color-bg-light) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.3) 0%, var(--color-bg-light) 70%);
   z-index: 1;
 }
 
+/* Container do hero: ocupa largura total e fica sobre o fundo */
 .s-hero .container {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
+/* Split: duas colunas equilibradas, alinhadas ao centro vertical */
 .hero-layout-split {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 3.5rem;
-  padding-top: 2rem;
+  gap: 4rem;
 }
 
+/* Coluna esquerda: conteúdo alinhado à esquerda da sua metade */
 .hero-left {
   display: flex;
   flex-direction: column;
@@ -249,52 +255,53 @@ section {
 
 .s-hero h1 {
   font-size: clamp(2.25rem, 4vw, 3.5rem);
-  line-height: 1.2;
-  max-width: 100%;
+  line-height: 1.15;
   margin: 0 0 1.25rem 0;
-  text-align: left;
-  /* Brilho Tátil do Título */
   color: var(--color-zinc-950);
 }
 
 .s-hero p.hero-subtitle {
-  max-width: 90%;
-  margin: 0 0 3rem 0;
-  text-align: left;
+  max-width: 92%;
+  margin: 0 0 2.5rem 0;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
 
 .hero-actions {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  align-items: center;
 }
 
-/* Glass Card no lado direito */
+/* Coluna direita: glass card */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-glass-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--color-border);
+  width: 100%;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(0,0,0,0.07);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-radius: 32px;
-  padding: 3rem;
+  padding: 2.5rem;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
-  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
   transition: transform 0.6s var(--curve-smooth);
 }
-
 .hero-glass-card:hover {
   transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 }
 
 .glass-orb {
   position: absolute;
-  top: -20%;
-  right: -20%;
-  width: 300px;
-  height: 300px;
+  top: -20%; right: -20%;
+  width: 280px; height: 280px;
   background: radial-gradient(circle, rgba(209,210,212,0.15) 0%, transparent 60%);
   border-radius: 50%;
   pointer-events: none;
@@ -308,12 +315,12 @@ section {
 .mock-bar-chart {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.875rem;
 }
 .bar-track {
   width: 100%;
   height: 6px;
-  background: var(--color-zinc-950);
+  background: rgba(0,0,0,0.06);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -646,13 +653,28 @@ footer p {
    MEDIA QUERIES (RESPONSIVIDADE INTELIGENTE)
    ========================================================================= */
 @media (max-width: 1024px) {
+  /* Hero: colapsa para coluna única, centralizado */
   .hero-layout-split {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .s-hero p.hero-subtitle {
+    max-width: 100%;
+  }
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-right {
+    justify-content: center;
+  }
+
   .span-8, .span-4, .span-12 { grid-column: span 12; }
-  
+
   .bento-card.span-12 .content {
     flex-direction: column;
     align-items: flex-start;
@@ -660,13 +682,10 @@ footer p {
   .bento-card.span-12 .text-block {
     max-width: 100%;
   }
-  
+
   .mechanism-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-  .dashboard-mockup {
-    margin-top: 2rem;
   }
 }
 
@@ -676,11 +695,21 @@ footer p {
   }
 
   .container {
-    padding: 0 1.25rem; /* 20px mínimo em cada lado */
+    padding: 0 1.25rem;
   }
 
+  /* Hero mobile: padding simétrico, sem deslocamento */
   .s-hero {
-    padding-top: 15vh;
+    padding: 5rem 0;
+    align-items: center;
+  }
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .brand-logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .roi-comparison {
