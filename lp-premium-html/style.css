@@ -106,7 +106,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   z-index: 100;
 }
 .header-container {
@@ -114,14 +114,13 @@ section {
   justify-content: center; /* Centralizado ou alinhado se preferir */
 }
 @media(min-width: 768px){
-  .header-container { justify-content: flex-start; }
+  .header-container { justify-content: center; }
 }
 .brand-logo {
   height: clamp(85px, 12vw, 135px);
   width: auto;
   opacity: 0.95;
   filter: brightness(0) drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
-  margin-bottom: 2.5rem;
 }
 
 /* O "Pill" de Autoridade Superior */
@@ -209,8 +208,7 @@ section {
   align-items: center;       /* eixo vertical */
   justify-content: center;   /* eixo horizontal (reforço) */
   overflow: hidden;
-  position: relative;
-  padding: 6rem 0;           /* respiro simétrico top/bottom */
+  position: relative;        /* respiro simétrico top/bottom */
 }
 
 /* Fundo decorativo */
@@ -340,6 +338,9 @@ section {
 .s-pains .header-context {
   max-width: 700px;
   margin-bottom: 5rem;
+}
+.s-pains .header-context h2 {
+  margin-bottom: 1rem;
 }
 
 /* Sistema Bento */
@@ -700,7 +701,6 @@ footer p {
 
   /* Hero mobile: padding simétrico, sem deslocamento */
   .s-hero {
-    padding: 5rem 0;
     align-items: center;
   }
   .hero-left {
@@ -739,6 +739,11 @@ footer p {
   .roi-block .cta-primary {
     padding: 1rem 1.5rem;
     font-size: 1rem;
+  }
+
+  /* Último card: overlay mais escuro no mobile (imagem compete com o texto) */
+  .bento-card.span-12 {
+    background-image: linear-gradient(90deg, rgba(31,31,33,1) 0%, rgba(31,31,33,0.97) 60%, rgba(31,31,33,0.85) 100%), url('assets/law_ceo_portrait.png') !important;
   }
 }
 
