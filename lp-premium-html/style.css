@@ -117,7 +117,7 @@ section {
   .header-container { justify-content: center; }
 }
 .brand-logo {
-  height: clamp(85px, 12vw, 135px);
+  height: clamp(170px, 15vw, 170px);
   width: auto;
   opacity: 0.95;
   filter: brightness(0) drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
