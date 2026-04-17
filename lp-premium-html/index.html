@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5PG8234W');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5PG8234W');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +18,17 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PG8234W"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PG8234W" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ==========================================
@@ -48,10 +55,10 @@
           </p>
 
           <div class="hero-actions delay-3">
-            <a href="#roi" class="cta-button cta-primary">
+            <button class="cta-button cta-primary open-diagnostic">
               Quero fazer o diagnóstico
               <i data-lucide="arrow-right"></i>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -61,22 +68,38 @@
             <div class="glass-orb"></div>
             <div class="glass-content">
               <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 2rem;">
-                <div style="width: 48px; height: 48px; border-radius:50%; background: var(--color-zinc-950); display:flex; align-items:center; justify-content:center; color: var(--color-platinum);">
+                <div
+                  style="width: 48px; height: 48px; border-radius:50%; background: var(--color-zinc-950); display:flex; align-items:center; justify-content:center; color: var(--color-platinum);">
                   <i data-lucide="activity"></i>
                 </div>
-                <span style="font-size: 0.75rem; color: #4a4a4c; text-transform:uppercase; letter-spacing: 0.05em; font-weight: 600;">Diagnóstico</span>
+                <span
+                  style="font-size: 0.75rem; color: #4a4a4c; text-transform:uppercase; letter-spacing: 0.05em; font-weight: 600;">Diagnóstico</span>
               </div>
-              <h3 style="margin: 0; font-size: 1.125rem; color: var(--color-zinc-950);">Riscos detectados na sua empresa</h3>
-              <p style="font-size: 0.9375rem; margin: 0.5rem 0 2rem; color: #4a4a4c;">Passivos ocultos que acumulam em silêncio até explodir em processo ou multa.</p>
+              <h3 style="margin: 0; font-size: 1.125rem; color: var(--color-zinc-950);">Riscos detectados na sua empresa
+              </h3>
+              <p style="font-size: 0.9375rem; margin: 0.5rem 0 2rem; color: #4a4a4c;">Passivos ocultos que acumulam em
+                silêncio até explodir em processo ou multa.</p>
               <div class="mock-bar-chart">
-                <div class="bar-track"><div class="bar-fill" style="width: 85%; background: #993333;"></div></div>
-                <div class="bar-track"><div class="bar-fill" style="width: 60%; background: #997733;"></div></div>
-                <div class="bar-track"><div class="bar-fill" style="width: 40%; background: #337744;"></div></div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 85%; background: #993333;"></div>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 60%; background: #997733;"></div>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 40%; background: #337744;"></div>
+                </div>
               </div>
               <div style="display:flex; gap: 0.5rem; margin-top: 1.5rem; flex-direction: column;">
-                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span style="width:10px;height:10px;border-radius:50%;background:#993333;flex-shrink:0;"></span>Passivo trabalhista</div>
-                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span style="width:10px;height:10px;border-radius:50%;background:#997733;flex-shrink:0;"></span>Contratos vulneráveis</div>
-                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span style="width:10px;height:10px;border-radius:50%;background:#337744;flex-shrink:0;"></span>Estrutura societária</div>
+                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span
+                    style="width:10px;height:10px;border-radius:50%;background:#993333;flex-shrink:0;"></span>Passivo
+                  trabalhista</div>
+                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span
+                    style="width:10px;height:10px;border-radius:50%;background:#997733;flex-shrink:0;"></span>Contratos
+                  vulneráveis</div>
+                <div style="font-size: 0.75rem; display:flex; align-items:center; gap:0.5rem; color:#4a4a4c;"><span
+                    style="width:10px;height:10px;border-radius:50%;background:#337744;flex-shrink:0;"></span>Estrutura
+                  societária</div>
               </div>
             </div>
           </div>
@@ -93,39 +116,46 @@
     <div class="container">
       <div class="header-context" data-animate>
         <h2>Quando o problema aparece, já é tarde.</h2>
-        <p>O risco jurídico fica escondido no dia a dia silencioso, acumulando até explodir como processo, multa ou bloqueio financeiro.</p>
+        <p>O risco jurídico fica escondido no dia a dia silencioso, acumulando até explodir como processo, multa ou
+          bloqueio financeiro.</p>
       </div>
 
       <div class="bento-grid">
 
-        <article class="bento-card span-8" data-animate style="background-image: linear-gradient(90deg, rgba(31,31,33,1) 0%, rgba(31,31,33,0.95) 50%, rgba(31,31,33,0.5) 100%), url('assets/law_bento_card.png'); background-size: cover; background-position: center; border: 1px solid var(--color-border);">
+        <article class="bento-card span-8" data-animate
+          style="background-image: linear-gradient(90deg, rgba(31,31,33,1) 0%, rgba(31,31,33,0.95) 50%, rgba(31,31,33,0.5) 100%), url('assets/law_bento_card.png'); background-size: cover; background-position: center; border: 1px solid var(--color-border);">
           <div class="content">
             <div class="icon-wrapper">
               <i data-lucide="file-text"></i>
             </div>
             <h3>Contratos copiados, RH nunca revisado</h3>
-            <p>Modelos prontos da internet viram a munição usada contra você no tribunal. Um RH informal e questões resolvidas no improviso acumulam passivo em silêncio.</p>
+            <p>Modelos prontos da internet viram a munição usada contra você no tribunal. Um RH informal e questões
+              resolvidas no improviso acumulam passivo em silêncio.</p>
           </div>
         </article>
 
-        <article class="bento-card span-4" data-animate class="delay-1" style="background-image: linear-gradient(160deg, rgba(31,31,33,0.97) 0%, rgba(31,31,33,0.75) 100%), url('assets/desk_detail.png'); background-size: cover; background-position: center; border: 1px solid var(--color-border);">
+        <article class="bento-card span-4" data-animate class="delay-1"
+          style="background-image: linear-gradient(160deg, rgba(31,31,33,0.97) 0%, rgba(31,31,33,0.75) 100%), url('assets/desk_detail.png'); background-size: cover; background-position: center; border: 1px solid var(--color-border);">
           <div class="content">
             <div class="icon-wrapper">
               <i data-lucide="triangle-alert"></i>
             </div>
             <h3>Você já pode estar exposto</h3>
-            <p>Usa contratos prontos. Tem funcionários, mas nunca revisou a estrutura trabalhista. Acredita que "nunca deu problema". Grande chance de já estar vulnerável sem saber.</p>
+            <p>Usa contratos prontos. Tem funcionários, mas nunca revisou a estrutura trabalhista. Acredita que "nunca
+              deu problema". Grande chance de já estar vulnerável sem saber.</p>
           </div>
         </article>
 
-        <article class="bento-card span-12" data-animate class="delay-2" style="background-image: linear-gradient(90deg, rgba(31,31,33,1) 0%, rgba(31,31,33,0.9) 40%, rgba(31,31,33,0.4) 100%), url('assets/law_ceo_portrait.png'); background-size: cover; background-position: center top; border: 1px solid var(--color-border);">
+        <article class="bento-card span-12" data-animate class="delay-2"
+          style="background-image: linear-gradient(90deg, rgba(31,31,33,1) 0%, rgba(31,31,33,0.9) 40%, rgba(31,31,33,0.4) 100%), url('assets/law_ceo_portrait.png'); background-size: cover; background-position: center top; border: 1px solid var(--color-border);">
           <div class="content">
             <div class="text-block">
               <div class="icon-wrapper">
                 <i data-lucide="flame"></i>
               </div>
               <h3>Quando explode, não vem leve.</h3>
-              <p>Processo trabalhista inesperado. Multas e penalidades. Bloqueios financeiros. Risco ao patrimônio dos sócios. Tudo isso poderia ter sido evitado.</p>
+              <p>Processo trabalhista inesperado. Multas e penalidades. Bloqueios financeiros. Risco ao patrimônio dos
+                sócios. Tudo isso poderia ter sido evitado.</p>
             </div>
           </div>
         </article>
@@ -147,36 +177,51 @@
             A Solução
           </div>
           <h2>Antes de corrigir, você precisa enxergar.</h2>
-          <p style="margin-top: 1rem;">O Diagnóstico Jurídico Empresarial mapeia, de forma clara e objetiva, onde sua empresa está vulnerável hoje. Sem juridiquês. Sem enrolação.</p>
+          <p style="margin-top: 1rem;">O Diagnóstico Jurídico Empresarial mapeia, de forma clara e objetiva, onde sua
+            empresa está vulnerável hoje. Sem juridiquês. Sem enrolação.</p>
 
           <ul>
             <li>
               <div class="bullet-icon"><i data-lucide="file-search"></i></div>
-              <div><h4>Levantamento completo dos riscos jurídicos</h4></div>
+              <div>
+                <h4>Levantamento completo dos riscos jurídicos</h4>
+              </div>
             </li>
             <li>
               <div class="bullet-icon"><i data-lucide="file-text"></i></div>
-              <div><h4>Análise de contratos e estrutura atual</h4></div>
+              <div>
+                <h4>Análise de contratos e estrutura atual</h4>
+              </div>
             </li>
             <li>
               <div class="bullet-icon"><i data-lucide="users"></i></div>
-              <div><h4>Identificação de falhas trabalhistas</h4></div>
+              <div>
+                <h4>Identificação de falhas trabalhistas</h4>
+              </div>
             </li>
             <li>
               <div class="bullet-icon"><i data-lucide="triangle-alert"></i></div>
-              <div><h4>Pontos críticos que podem gerar prejuízo</h4></div>
+              <div>
+                <h4>Pontos críticos que podem gerar prejuízo</h4>
+              </div>
             </li>
             <li>
               <div class="bullet-icon"><i data-lucide="shield-check"></i></div>
-              <div><h4>Orientação prática sobre o que corrigir agora</h4></div>
+              <div>
+                <h4>Orientação prática sobre o que corrigir agora</h4>
+              </div>
             </li>
           </ul>
         </div>
 
         <div class="mechanism-visual" data-animate class="delay-2">
-          <div style="border-radius: 24px; overflow: hidden; height: 100%; min-height: 480px; position: relative; border: 1px solid var(--color-border); box-shadow: 0 40px 80px rgba(0,0,0,0.5);">
-            <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(9,9,11,0.8) 0%, rgba(9,9,11,0) 40%); z-index: 1;"></div>
-            <img src="assets/law_ceo_portrait.png" alt="Diagnóstico Jurídico" style="position: absolute; width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%) contrast(1.05); z-index: 0;">
+          <div
+            style="border-radius: 24px; overflow: hidden; height: 100%; min-height: 480px; position: relative; border: 1px solid var(--color-border); box-shadow: 0 40px 80px rgba(0,0,0,0.5);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(9,9,11,0.8) 0%, rgba(9,9,11,0) 40%); z-index: 1;">
+            </div>
+            <img src="assets/law_ceo_portrait.png" alt="Diagnóstico Jurídico"
+              style="position: absolute; width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%) contrast(1.05); z-index: 0;">
           </div>
         </div>
 
@@ -195,10 +240,10 @@
           Ou descobrir agora, com clareza, antes que vire um problema real.
         </p>
 
-        <a href="https://wa.me/xxxxxxxxxxxx" class="cta-button cta-primary" target="_blank" rel="noopener noreferrer">
+        <button class="cta-button cta-primary open-diagnostic" style="margin-top: 2rem;">
           Quero fazer o diagnóstico da minha empresa
           <i data-lucide="check-circle"></i>
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -209,6 +254,174 @@
       <p>DNS Sociedade de Advogados &copy; 2025. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- ==========================================
+       DIAGNOSTIC MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="modalDiagnostic">
+    <div class="modal-card">
+      <button class="btn-close-modal" id="closeModal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Progress Bar -->
+      <div class="modal-progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="modal-content">
+        <form id="diagnosticForm">
+          <!-- Step 1 -->
+          <div class="form-step active" data-step="1">
+            <h3>Sua empresa possui quantos funcionários atualmente?</h3>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="funcionarios" value="Não tenho funcionários" required>
+                <div class="option-content">
+                  <span>Não tenho funcionários</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="funcionarios" value="1 a 3 funcionários">
+                <div class="option-content">
+                  <span>1 a 3 funcionários</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="funcionarios" value="4 a 10 funcionários">
+                <div class="option-content">
+                  <span>4 a 10 funcionários</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="funcionarios" value="Mais de 10 funcionários">
+                <div class="option-content">
+                  <span>Mais de 10 funcionários</span>
+                </div>
+              </label>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="cta-button cta-primary btn-next">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" data-step="2">
+            <h3>Hoje, como está a parte jurídica da sua empresa?</h3>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="juridico" value="Nunca revisei contratos ou estrutura jurídica" required>
+                <div class="option-content">
+                  <span>Nunca revisei contratos ou estrutura jurídica</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="juridico" value="Tenho contratos, mas nunca revisei com especialista">
+                <div class="option-content">
+                  <span>Tenho contratos, mas nunca revisei com especialista</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="juridico" value="Já tive problemas jurídicos ou processos">
+                <div class="option-content">
+                  <span>Já tive problemas jurídicos ou processos</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="juridico" value="Tenho acompanhamento jurídico ativo">
+                <div class="option-content">
+                  <span>Tenho acompanhamento jurídico ativo</span>
+                </div>
+              </label>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="cta-button cta-secondary btn-prev">Voltar</button>
+              <button type="button" class="cta-button cta-primary btn-next">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" data-step="3">
+            <h3>Qual melhor descreve seu momento atual?</h3>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="momento" value="Quero me prevenir e evitar problemas futuros" required>
+                <div class="option-content">
+                  <span>Quero me prevenir e evitar problemas futuros</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="momento" value="Suspeito que já tenho riscos na empresa">
+                <div class="option-content">
+                  <span>Suspeito que já tenho riscos na empresa</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="momento" value="Já tenho problemas e preciso resolver">
+                <div class="option-content">
+                  <span>Já tenho problemas e preciso resolver</span>
+                </div>
+              </label>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="cta-button cta-secondary btn-prev">Voltar</button>
+              <button type="button" class="cta-button cta-primary btn-next">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-step" data-step="4">
+            <h3>Disposição para investir em segurança jurídica:</h3>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="investimento" value="Sim, se fizer sentido pra minha empresa" required>
+                <div class="option-content">
+                  <span>Sim, se fizer sentido pra minha empresa</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="investimento" value="Talvez, preciso entender melhor">
+                <div class="option-content">
+                  <span>Talvez, preciso entender melhor</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="investimento" value="Não pretendo investir agora">
+                <div class="option-content">
+                  <span>Não pretendo investir agora</span>
+                </div>
+              </label>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="cta-button cta-secondary btn-prev">Voltar</button>
+              <button type="button" class="cta-button cta-primary btn-next">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Step 5 (Submit) -->
+          <div class="form-step" data-step="5">
+            <h3>Finalize seu diagnóstico</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Deixe seus dados para receber o retorno do especialista.</p>
+            <div class="input-group">
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="input-group">
+              <label for="whats">WhatsApp</label>
+              <input type="tel" id="whats" name="whats" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="cta-button cta-secondary btn-prev">Voltar</button>
+              <button type="submit" class="cta-button cta-primary">
+                Enviar para WhatsApp
+                <i data-lucide="send"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -235,6 +448,102 @@
         card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
       });
     });
+
+    // ==========================================
+    // DIAGNOSTIC MODAL LOGIC
+    // ==========================================
+    const modal = document.getElementById('modalDiagnostic');
+    const openBtns = document.querySelectorAll('.open-diagnostic');
+    const closeBtn = document.getElementById('closeModal');
+    const form = document.getElementById('diagnosticForm');
+    const steps = document.querySelectorAll('.form-step');
+    const nextBtns = document.querySelectorAll('.btn-next');
+    const prevBtns = document.querySelectorAll('.btn-prev');
+    const progressFill = document.getElementById('progressFill');
+
+    let currentStep = 1;
+    const totalSteps = steps.length;
+
+    function updateModal() {
+      steps.forEach(step => {
+        step.classList.toggle('active', parseInt(step.dataset.step) === currentStep);
+      });
+      progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
+    }
+
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      currentStep = 1;
+      form.reset();
+      updateModal();
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    nextBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Validation
+        const currentStepEl = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+        const radios = currentStepEl.querySelectorAll('input[type="radio"]');
+        if (radios.length > 0) {
+          const checked = currentStepEl.querySelector('input[type="radio"]:checked');
+          if (!checked) {
+            alert('Por favor, selecione uma opção para continuar.');
+            return;
+          }
+        }
+
+        if (currentStep < totalSteps) {
+          currentStep++;
+          updateModal();
+        }
+      });
+    });
+
+    prevBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentStep > 1) {
+          currentStep--;
+          updateModal();
+        }
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const message = `Olá! Acabei de realizar o Diagnóstico Jurídico no site. Aqui estão meus resultados:
+
+🏢 *Empresa:* ${data.funcionarios}
+⚖️ *Situação Jurídica:* ${data.juridico}
+🚀 *Momento:* ${data.momento}
+💰 *Investimento:* ${data.investimento}
+
+👤 *Nome:* ${data.nome}
+📱 *WhatsApp:* ${data.whats}
+
+Gostaria de agendar uma reunião para entender melhor meus riscos.`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/551122771072?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+      closeModal();
+    });
   </script>
 </body>
+
 </html>
