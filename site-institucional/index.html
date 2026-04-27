@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5PG8234W');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dmitrasinovic, Neves e Silva | Sociedade de Advogados</title>
+  <meta name="description" content="Escritório especializado em empresas. Inovadoras em soluções jurídicas. Transformamos desafios em soluções com segurança jurídica. Bragança Paulista/SP.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       VARIABLES
+    ============================================================ */
+    :root {
+      --bg:        #090909;
+      --bg-alt:    #111111;
+      --bg-card:   #141414;
+      --text:      #e4e4e4;
+      --text-2:    #8a8a8a;
+      --text-3:    #555555;
+      --gold:      #c8a96e;
+      --gold-dim:  rgba(200,169,110,0.25);
+      --border:    rgba(255,255,255,0.07);
+      --border-g:  rgba(200,169,110,0.28);
+      --white:     #ffffff;
+      --black:     #000000;
+      --ff-serif:  'Playfair Display', Georgia, serif;
+      --ff-sans:   'Inter', system-ui, sans-serif;
+      --max-w:     1180px;
+      --r:         4px;
+      --r-lg:      10px;
+      --ease:      0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; }
+    body  {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+    img   { display: block; max-width: 100%; }
+    a     { color: inherit; text-decoration: none; }
+    ul    { list-style: none; }
+    button { font-family: inherit; cursor: pointer; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ============================================================
+       SHARED COMPONENTS
+    ============================================================ */
+    .label {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border-g);
+      padding: 0.28rem 0.8rem;
+      border-radius: 2px;
+      margin-bottom: 1.1rem;
+    }
+
+    .h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.75rem, 3vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    .lead {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      max-width: 640px;
+      margin-top: 0.85rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--r-lg);
+      border: none;
+      transition: all var(--ease);
+      white-space: nowrap;
+    }
+
+    .btn-solid {
+      background: var(--white);
+      color: var(--black);
+    }
+    .btn-solid:hover {
+      background: var(--gold);
+      color: var(--black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,169,110,.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ============================================================
+       SCROLL ANIMATIONS
+    ============================================================ */
+    [data-anim] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    [data-anim].visible          { opacity: 1; transform: none; }
+    [data-anim][data-delay="1"]  { transition-delay: 0.1s; }
+    [data-anim][data-delay="2"]  { transition-delay: 0.2s; }
+    [data-anim][data-delay="3"]  { transition-delay: 0.3s; }
+
+    /* ============================================================
+       TOP BAR
+    ============================================================ */
+    .topbar {
+      background: #000;
+      border-bottom: 1px solid var(--border);
+      padding: 0.45rem 0;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar-email {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      color: var(--text-2);
+    }
+    .topbar-email svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .topbar-cta {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      padding: 0.38rem 1rem;
+      border-radius: var(--r);
+      transition: opacity var(--ease);
+    }
+    .topbar-cta:hover { opacity: 0.82; }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(9,9,9,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--ease);
+    }
+    .nav.shadow { box-shadow: 0 4px 40px rgba(0,0,0,.6); }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.7rem 0;
+    }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--r);
+      transition: color var(--ease), background var(--ease);
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,.05); }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0.45rem;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--ease);
+    }
+    .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 0.88rem;
+      color: var(--text-2);
+      padding: 0.8rem 2rem;
+      border-bottom: 1px solid var(--border);
+      transition: color var(--ease);
+    }
+    .mobile-menu a:hover { color: var(--white); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../assets-site-instucional/Image by Samson.avif');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        108deg,
+        rgba(5,5,5,.97) 0%,
+        rgba(5,5,5,.88) 45%,
+        rgba(5,5,5,.55) 100%
+      );
+    }
+    .hero-fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 90px;
+      background: linear-gradient(to top, var(--bg), transparent);
+      z-index: 1;
+    }
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+      padding: 7rem 0;
+      width: 100%;
+    }
+    .hero-logo-col { flex-shrink: 0; }
+    .hero-logo-col img {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+    }
+    .hero-copy { max-width: 500px; }
+    .hero-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--white);
+      margin-bottom: 1.4rem;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(228,228,228,.7);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    /* ============================================================
+       NOSSA HISTÓRIA
+    ============================================================ */
+    .s-historia {
+      padding: 7rem 0 8rem;
+      background: var(--bg);
+    }
+    .historia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .historia-paras {
+      margin: 1.5rem 0 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.05rem;
+    }
+    .historia-paras p {
+      font-size: 0.915rem;
+      color: var(--text-2);
+      line-height: 1.82;
+    }
+
+    /* Tabs */
+    .tabs-nav {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 0.48rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-2);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: all var(--ease);
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+    }
+    .tabs-content { margin-top: 1.25rem; }
+    .tab-panel {
+      display: none;
+      padding: 1.4rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--r-lg) var(--r-lg) 0;
+      animation: fadeUp .3s ease;
+    }
+    .tab-panel.active { display: block; }
+    .tab-panel p { font-size: 0.9rem; color: var(--text-2); line-height: 1.8; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* História visual side */
+    .historia-visual { position: relative; }
+    .historia-img {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      position: relative;
+    }
+    .historia-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(15%) contrast(1.05);
+      transition: transform .65s ease;
+    }
+    .historia-img:hover img { transform: scale(1.04); }
+    .historia-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(9,9,9,.65) 100%);
+    }
+    .historia-badge {
+      position: absolute;
+      bottom: -1.6rem;
+      left: 1.75rem;
+      z-index: 2;
+      background: var(--bg-card);
+      border: 1px solid var(--border-g);
+      border-radius: var(--r-lg);
+      padding: 0.9rem 1.4rem;
+    }
+    .historia-badge strong {
+      display: block;
+      font-family: var(--ff-serif);
+      font-size: 1.6rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .historia-badge span {
+      font-size: 0.7rem;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ============================================================
+       SOLUÇÕES
+    ============================================================ */
+    .s-solucoes {
+      padding: 7rem 0 0;
+      background: var(--bg-alt);
+    }
+    .solucoes-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 5rem;
+    }
+    .solucoes-head .lead { margin: 1rem auto 0; }
+
+    /* Alternating rows */
+    .servico {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+    }
+    .servico:last-child { border-bottom: 1px solid var(--border); }
+
+    .servico-img {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+    }
+    .servico-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s ease;
+    }
+    .servico:hover .servico-img img { transform: scale(1.05); }
+    .servico-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(5,5,5,.42);
+      z-index: 1;
+    }
+    .servico-img-tag {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      z-index: 2;
+      font-family: var(--ff-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      padding: 0.35rem 0.7rem;
+      background: rgba(5,5,5,.72);
+      border-left: 3px solid var(--gold);
+    }
+
+    .servico-body {
+      padding: 3.5rem 3.5rem 3.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--bg-card);
+      border-left: 1px solid var(--border);
+    }
+    .servico.rev .servico-body {
+      order: -1;
+      border-left: none;
+      border-right: 1px solid var(--border);
+      padding: 3.5rem 4rem 3.5rem 3.5rem;
+    }
+
+    .servico-num {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.65rem;
+    }
+    .servico-title {
+      font-family: var(--ff-serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+    .servico-desc {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .servico-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .servico-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.55;
+    }
+    .servico-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 0.48rem;
+    }
+
+    /* ============================================================
+       QUEM SOMOS
+    ============================================================ */
+    .s-equipe {
+      padding: 7rem 0;
+      background: var(--bg);
+    }
+    .equipe-head {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .equipe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card-equipe {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+    }
+    .card-equipe:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 64px rgba(0,0,0,.55);
+      border-color: var(--border-g);
+    }
+    .card-photo {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+    .card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      filter: grayscale(10%);
+      transition: transform .65s ease, filter .35s ease;
+    }
+    .card-equipe:hover .card-photo img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+    .card-photo-grad {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(9,9,9,.8) 100%);
+    }
+    .card-info {
+      padding: 1.4rem 1.5rem 1.6rem;
+      border-top: 1px solid var(--border);
+    }
+    .card-name {
+      font-family: var(--ff-serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+    .card-role {
+      font-size: 0.72rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+    .card-bio {
+      font-size: 0.815rem;
+      color: var(--text-3);
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+    }
+    .btn-saiba {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 0.45rem 0.95rem;
+      background: transparent;
+      transition: all var(--ease);
+    }
+    .btn-saiba:hover { background: var(--gold); border-color: var(--gold); color: #000; }
+
+    /* ============================================================
+       FOOTER / CONTATO
+    ============================================================ */
+    .footer {
+      background: #000;
+      border-top: 1px solid var(--border);
+      padding: 5rem 0 2.5rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.85fr 1.1fr 1.6fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .footer-col-label {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1.25rem;
+    }
+    .footer-logo { margin-bottom: 1.1rem; }
+    .footer-logo img { height: 56px; width: auto; object-fit: contain; }
+    .footer-blurb {
+      font-size: 0.82rem;
+      color: var(--text-3);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-list { display: flex; flex-direction: column; gap: 0.45rem; }
+    .social-list a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: var(--text-2);
+      transition: color var(--ease);
+    }
+    .social-list a:hover { color: var(--gold); }
+    .social-list a svg { width: 17px; height: 17px; }
+
+    .address {
+      font-size: 0.86rem;
+      color: var(--text-2);
+      line-height: 1.82;
+      font-style: normal;
+    }
+    .address strong { color: var(--text); font-weight: 500; }
+    .address a { color: var(--gold); transition: opacity var(--ease); }
+    .address a:hover { opacity: .75; }
+
+    /* Footer form */
+    .f-group { display: flex; flex-direction: column; gap: 0.28rem; margin-bottom: 0.65rem; }
+    .f-group label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .f-group input,
+    .f-group select,
+    .f-group textarea {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      color: var(--text);
+      font-family: var(--ff-sans);
+      font-size: 0.85rem;
+      padding: 0.58rem 0.8rem;
+      outline: none;
+      width: 100%;
+      transition: border-color var(--ease);
+    }
+    .f-group input::placeholder,
+    .f-group textarea::placeholder { color: var(--text-3); }
+    .f-group input:focus,
+    .f-group textarea:focus { border-color: var(--gold); }
+    .f-group textarea { resize: vertical; min-height: 76px; }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .historia-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .historia-visual { max-width: 460px; }
+      .servico { grid-template-columns: 1fr; }
+      .servico-body,
+      .servico.rev .servico-body {
+        order: 0;
+        border: none;
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 1.75rem;
+      }
+      .servico-img { min-height: 300px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+      .hero-body { flex-direction: column; gap: 2.5rem; padding: 5rem 0 4rem; }
+      .hero-logo-col { text-align: center; }
+      .hero-logo-col img { width: 150px; margin: 0 auto; }
+      .equipe-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 540px) {
+      .container { padding: 0 1.25rem; }
+      .topbar-email { display: none; }
+      .hero-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PG8234W"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ============================================================
+       TOP BAR
+  ============================================================ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <span class="topbar-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          adm@advocaciadns.com
+        </span>
+        <a href="https://wa.me/551122771072?text=Olá!%20Gostaria%20de%20falar%20com%20um%20advogado." target="_blank" rel="noopener noreferrer" class="topbar-cta">
+          Falar com Advogado!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#topo" class="nav-logo" aria-label="DNS Advogados – Início">
+          <img src="../LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
+        </a>
+        <div class="nav-links">
+          <a href="#historia">Nossa História</a>
+          <a href="#historia">Missão, Visão e Valores</a>
+          <a href="#solucoes">Serviços</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+        <a href="#historia">Nossa História</a>
+        <a href="#historia">Missão, Visão e Valores</a>
+        <a href="#solucoes">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="topo">
+    <div class="hero-bg" role="img" aria-label="Fundo corporativo jurídico"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-fade" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-body">
+
+        <div class="hero-logo-col" data-anim>
+          <img src="../LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
+        </div>
+
+        <div class="hero-copy" data-anim data-delay="1">
+          <span class="label">Advocacia Empresarial</span>
+          <h1 class="hero-title">
+            <em>Inovadoras</em> em<br>Soluções Jurídicas
+          </h1>
+          <p class="hero-sub">
+            Transformamos desafios em soluções com segurança jurídica, para que sua empresa cresça com tranquilidade.
+          </p>
+          <a href="https://wa.me/551122771072?text=Olá!%20Gostaria%20de%20falar%20com%20um%20advogado."
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-solid">
+            Falar com Advogado!
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOSSA HISTÓRIA
+  ============================================================ -->
+  <section class="s-historia" id="historia">
+    <div class="container">
+      <div class="historia-grid">
+
+        <!-- Texto -->
+        <div data-anim>
+          <span class="label">Sobre o Escritório</span>
+          <h2 class="h2">Nossa História</h2>
+
+          <div class="historia-paras">
+            <p>Dmitrasinovic, Neves e Silva Sociedade de Advogados é um escritório especializado em empresas, que visa potencializar o crescimento do negócio de seus clientes, transformando desafios em soluções, com segurança jurídica.</p>
+            <p>Após atuarmos em escritórios tradicionais da cidade de Bragança Paulista, compreendemos a necessidade urgente de trazer renovo e modernidade à advocacia do interior.</p>
+            <p>Para nós, a modernização vai além da implementação de tecnologias, mas por uma nova maneira de enxergar as funções do advogado, principalmente pela forma que se comunica e suas entregas.</p>
+            <p>Na nossa advocacia, transformamos complexidade em praticidade, garantindo a real compreensão dos direitos e obrigações, possibilitando à empresa se dedicar com tranquilidade apenas no crescimento do seu negócio.</p>
+            <p>Entender ao máximo a atividade que a empresa desempenha e suas particularidades nos permite agir de forma preventiva, evitando riscos desnecessários.</p>
+            <p>Desejamos nos tornar um jurídico que seja visto como um parceiro do negócio, diante das estratégias comerciais e objetivos da empresa.</p>
+          </div>
+
+          <div class="tabs-nav" role="tablist">
+            <button class="tab-btn active" data-tab="missao" role="tab" aria-selected="true">Missão</button>
+            <button class="tab-btn" data-tab="visao"  role="tab" aria-selected="false">Visão</button>
+            <button class="tab-btn" data-tab="valores" role="tab" aria-selected="false">Valores</button>
+          </div>
+
+          <div class="tabs-content">
+            <div class="tab-panel active" id="tab-missao" role="tabpanel">
+              <p>Oferecer soluções jurídicas personalizadas e inovadoras para empresas, atuando de forma preventiva e estratégica, com foco no crescimento e na segurança do negócio dos nossos clientes.</p>
+            </div>
+            <div class="tab-panel" id="tab-visao" role="tabpanel">
+              <p>Ser reconhecidas como parceiras estratégicas dos nossos clientes, referência em advocacia empresarial inovadora no interior de São Paulo, unindo excelência técnica e comunicação clara.</p>
+            </div>
+            <div class="tab-panel" id="tab-valores" role="tabpanel">
+              <p>Integridade, comprometimento, inovação, clareza na comunicação, excelência técnica e parceria verdadeira com os clientes — esses são os pilares que guiam cada decisão do nosso escritório.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagem -->
+        <div class="historia-visual" data-anim data-delay="2">
+          <div class="historia-img">
+            <img src="../assets-site-instucional/772e2a_be5ce15de7df4d658d72438f710dfa9a~mv2.avif"
+                 alt="Escritório DNS Advogados — ambiente corporativo"
+                 loading="lazy">
+          </div>
+          <div class="historia-badge">
+            <strong>2024</strong>
+            <span>Fundação do Escritório</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOSSAS SOLUÇÕES EMPRESARIAIS
+  ============================================================ -->
+  <section class="s-solucoes" id="solucoes">
+    <div class="container">
+      <div class="solucoes-head" data-anim>
+        <span class="label">Áreas de Atuação</span>
+        <h2 class="h2">Nossas Soluções Empresariais</h2>
+        <p class="lead">Sabemos que gerenciar uma empresa traz desafios jurídicos complexos. Por isso, oferecemos soluções personalizadas para atender às necessidades e enfrentar os desafios reais dos nossos clientes.</p>
+      </div>
+    </div>
+
+    <!-- 01 · Assessoria Cível Empresarial -->
+    <div class="servico" data-anim>
+      <div class="servico-img">
+        <img src="../assets-site-instucional/WhatsApp Image 2024-08-20 at 13_03_52.avif"
+             alt="Assessoria Cível Empresarial" loading="lazy">
+        <div class="servico-img-overlay"></div>
+        <div class="servico-img-tag">Assessoria Cível Empresarial</div>
+      </div>
+      <div class="servico-body">
+        <p class="servico-num">01 — Serviço</p>
+        <h3 class="servico-title">Assessoria Cível Empresarial</h3>
+        <ul class="servico-list">
+          <li>Análise e gestão dos contratos vigentes e apontamentos de riscos;</li>
+          <li>Elaboração de contratos e demais documentos jurídicos;</li>
+          <li>Apoio técnico para tomada de decisões;</li>
+          <li>Atuação em processos judiciais e administrativos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 02 · Assessoria Trabalhista -->
+    <div class="servico rev" data-anim>
+      <div class="servico-img">
+        <img src="../assets-site-instucional/Image by Samson.avif"
+             alt="Assessoria Trabalhista" loading="lazy">
+        <div class="servico-img-overlay"></div>
+        <div class="servico-img-tag">Assessoria Trabalhista</div>
+      </div>
+      <div class="servico-body">
+        <p class="servico-num">02 — Serviço</p>
+        <h3 class="servico-title">Assessoria Trabalhista</h3>
+        <ul class="servico-list">
+          <li>Elaboração e revisão de contratos trabalhistas e demais documentos jurídicos;</li>
+          <li>Consultoria e resolução de dúvidas do cotidiano da empresa;</li>
+          <li>Treinamento e orientação dos colaboradores;</li>
+          <li>Elaboração de cartilha sobre as normas coletivas da categoria;</li>
+          <li>Elaboração de regulamento interno da empresa;</li>
+          <li>Defesa em processos judiciais e administrativos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 03 · Construção Civil -->
+    <div class="servico" data-anim>
+      <div class="servico-img">
+        <img src="../assets-site-instucional/view-worker-grinding-piece-metal.avif"
+             alt="Construção Civil" loading="lazy">
+        <div class="servico-img-overlay"></div>
+        <div class="servico-img-tag">Construção Civil</div>
+      </div>
+      <div class="servico-body">
+        <p class="servico-num">03 — Serviço</p>
+        <h3 class="servico-title">Construção Civil</h3>
+        <ul class="servico-list">
+          <li>Contrato de Empreitada;</li>
+          <li>Contrato de Subempreitada;</li>
+          <li>Contrato de Administração de Obra / Gestão de Obra;</li>
+          <li>Contrato de Trabalho;</li>
+          <li>Contrato de Prestação de Serviços;</li>
+          <li>Análise e gestão dos contratos vigentes e apontamentos de riscos;</li>
+          <li>Elaboração de documentos para gestão de riscos / segurança do trabalho.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 04 · Cobrança de Inadimplentes -->
+    <div class="servico rev" data-anim>
+      <div class="servico-img">
+        <img src="../assets-site-instucional/calculator-money-pencil-closeup-blurred-background.avif"
+             alt="Cobrança de Inadimplentes" loading="lazy">
+        <div class="servico-img-overlay"></div>
+        <div class="servico-img-tag">Cobrança de Inadimplentes</div>
+      </div>
+      <div class="servico-body">
+        <p class="servico-num">04 — Serviço</p>
+        <h3 class="servico-title">Cobrança de Inadimplentes</h3>
+        <ul class="servico-list">
+          <li>Análise da carteira de inadimplentes e viabilidade da cobrança;</li>
+          <li>Elaboração personalizada de um procedimento de cobrança;</li>
+          <li>Atuação extrajudicial (tentativa amigável para recuperação do crédito);</li>
+          <li>Atuação judicial com as ações de cobrança.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 05 · Legal Design e Visual Law -->
+    <div class="servico" data-anim>
+      <div class="servico-img">
+        <img src="../assets-site-instucional/abstract-glowing-flame-drops-electric-illumination-generative-ai.avif"
+             alt="Legal Design e Visual Law" loading="lazy">
+        <div class="servico-img-overlay"></div>
+        <div class="servico-img-tag">Legal Design e Visual Law</div>
+      </div>
+      <div class="servico-body">
+        <p class="servico-num">05 — Serviço</p>
+        <h3 class="servico-title">Legal Design e Visual Law</h3>
+        <p class="servico-desc">Com objetivo de levar acessibilidade à comunicação de serviços jurídicos, desenvolvemos os documentos da sua empresa com inovação, por meio da utilização de técnicas de legal design e visual law.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       QUEM SOMOS
+  ============================================================ -->
+  <section class="s-equipe" id="equipe">
+    <div class="container">
+      <div class="equipe-head" data-anim>
+        <span class="label">A Equipe</span>
+        <h2 class="h2">Quem Somos:</h2>
+      </div>
+
+      <div class="equipe-grid">
+
+        <!-- Caroline -->
+        <div class="card-equipe" data-anim>
+          <div class="card-photo">
+            <img src="../assets-site-instucional/Dra. Caroline Silva.avif"
+                 alt="Dra. Caroline Silva" loading="lazy">
+            <div class="card-photo-grad" aria-hidden="true"></div>
+          </div>
+          <div class="card-info">
+            <p class="card-name">Dra. Caroline Silva</p>
+            <p class="card-role">Trabalhista Patronal</p>
+            <p class="card-bio">Sócia nominal, atuante na área Trabalhista Patronal. Especialista em Direito do Trabalho e Previdenciário.</p>
+            <button class="btn-saiba" type="button">Saiba Mais</button>
+          </div>
+        </div>
+
+        <!-- Charlotte -->
+        <div class="card-equipe" data-anim data-delay="1">
+          <div class="card-photo">
+            <img src="../assets-site-instucional/Dra. Charlotte Neves.avif"
+                 alt="Dra. Charlotte Neves" loading="lazy">
+            <div class="card-photo-grad" aria-hidden="true"></div>
+          </div>
+          <div class="card-info">
+            <p class="card-name">Dra. Charlotte Neves</p>
+            <p class="card-role">Cível · Empresarial · Legal Design</p>
+            <p class="card-bio">Sócia nominal, atuante nas áreas Cível e Empresarial, com ênfase em Recuperação de Crédito e aplicação de Legal Design e Visual Law. Especialista em Direito Civil e Empresarial.</p>
+            <button class="btn-saiba" type="button">Saiba Mais</button>
+          </div>
+        </div>
+
+        <!-- Daniela -->
+        <div class="card-equipe" data-anim data-delay="2">
+          <div class="card-photo">
+            <img src="../assets-site-instucional/Dra. Daniela Dmitrasinovic.avif"
+                 alt="Dra. Daniela Dmitrasinovic" loading="lazy">
+            <div class="card-photo-grad" aria-hidden="true"></div>
+          </div>
+          <div class="card-info">
+            <p class="card-name">Dra. Daniela Dmitrasinovic</p>
+            <p class="card-role">Cível · Empresarial · Contratual</p>
+            <p class="card-bio">Sócia nominal, atuante nas áreas Cível, Empresarial e Contratual. Pós-graduanda em Contratos, Execução Contratual e Responsabilidade Civil.</p>
+            <button class="btn-saiba" type="button">Saiba Mais</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER / CONTATO
+  ============================================================ -->
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Contato -->
+        <div data-anim>
+          <p class="footer-col-label">Contato</p>
+          <div class="footer-logo">
+            <img src="../LogoSemFundo-04.png" alt="DNS Advogados">
+          </div>
+          <p class="footer-blurb">Inovadoras em Soluções Jurídicas.<br>Bragança Paulista, SP.</p>
+          <a href="https://wa.me/551122771072?text=Olá!%20Gostaria%20de%20falar%20com%20um%20advogado."
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-solid">
+            Falar com Advogado!
+          </a>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div data-anim data-delay="1">
+          <p class="footer-col-label">Redes Sociais</p>
+          <ul class="social-list">
+            <li>
+              <a href="https://instagram.com/advocaciadns" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/>
+                </svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/advocaciadns" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Localização -->
+        <div data-anim data-delay="2">
+          <p class="footer-col-label">Nossa Localização</p>
+          <address class="address">
+            <strong>Bragança Paulista/SP</strong><br>
+            Rua José Domingues, 205<br>
+            Centro — CEP: 12900-260<br><br>
+            <a href="tel:+551122771072">(11) 2277-1072</a>
+          </address>
+        </div>
+
+        <!-- Formulário -->
+        <div data-anim data-delay="3">
+          <p class="footer-col-label">Formulário</p>
+          <form id="contactForm" novalidate>
+            <div class="f-group">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="f-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="f-group">
+              <label for="f-assunto">Assunto</label>
+              <input type="text" id="f-assunto" name="assunto" placeholder="Assunto da mensagem">
+            </div>
+            <div class="f-group">
+              <label for="f-msg">Mensagem</label>
+              <textarea id="f-msg" name="mensagem" placeholder="Sua mensagem..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center;margin-top:0.2rem;">
+              Enviar
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Dmitrasinovic, Neves e Silva Sociedade de Advogados. Todos os direitos reservados.</span>
+        <span>OAB/SP</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    /* --- Scroll animations --- */
+    const animEls = document.querySelectorAll('[data-anim]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    animEls.forEach(el => io.observe(el));
+
+    /* --- Nav shadow on scroll --- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('shadow', window.scrollY > 55);
+    }, { passive: true });
+
+    /* --- Mobile menu --- */
+    const burger     = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* --- Tabs (Missão / Visão / Valores) --- */
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    /* --- Contact form → WhatsApp --- */
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome     = this.nome.value.trim();
+      const email    = this['email'].value.trim();
+      const assunto  = this.assunto.value.trim();
+      const mensagem = this.mensagem.value.trim();
+      if (!nome || !email) { alert('Por favor, preencha pelo menos nome e e-mail.'); return; }
+      const text = `Olá! Contato pelo site:\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Assunto:* ${assunto || '—'}\n*Mensagem:* ${mensagem || '—'}`;
+      window.open('https://wa.me/551122771072?text=' + encodeURIComponent(text), '_blank');
+    });
+  </script>
+</body>
+
+</html>
