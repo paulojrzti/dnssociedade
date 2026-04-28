@@ -267,7 +267,7 @@
     ============================================================ */
     .hero {
       position: relative;
-      min-height: 95vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -275,7 +275,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('../assets-site-instucional/Image by Samson.avif');
+      background-image: url('../assets-site-instucional/772e2a_28938a08881e48f29b0d76a771076e9b~mv2.avif');
       background-size: cover;
       background-position: center 30%;
     }
@@ -302,7 +302,7 @@
       display: flex;
       align-items: center;
       gap: 6rem;
-      padding: 3rem 0;
+      padding: 2.2rem 0;
       width: 100%;
     }
     .hero-logo-col { flex-shrink: 0; }
@@ -333,7 +333,11 @@
     ============================================================ */
     .s-historia {
       padding: 7rem 0 8rem;
-      background: var(--bg);
+      background:
+        linear-gradient(180deg, rgba(9,9,9,.9) 0%, rgba(9,9,9,.93) 100%),
+        url('../assets-site-instucional/772e2a_72f5c216a9174e91b88f834b060cde91~mv2.avif');
+      background-size: cover;
+      background-position: center;
     }
     .historia-grid {
       display: grid;
@@ -396,49 +400,16 @@
     /* História visual side */
     .historia-visual { position: relative; }
     .historia-img {
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      position: relative;
+      max-width: 620px;
+      margin-left: auto;
     }
     .historia-img img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(15%) contrast(1.05);
-      transition: transform .65s ease;
+      height: auto;
+      object-fit: contain;
+      padding: 0;
+      filter: none;
     }
-    .historia-img:hover img { transform: scale(1.04); }
-    .historia-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 55%, rgba(9,9,9,.65) 100%);
-    }
-    .historia-badge {
-      position: absolute;
-      bottom: -1.6rem;
-      left: 1.75rem;
-      z-index: 2;
-      background: var(--bg-card);
-      border: 1px solid var(--border-g);
-      border-radius: var(--r-lg);
-      padding: 0.9rem 1.4rem;
-    }
-    .historia-badge strong {
-      display: block;
-      font-family: var(--ff-serif);
-      font-size: 1.6rem;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .historia-badge span {
-      font-size: 0.7rem;
-      color: var(--text-3);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
     /* ============================================================
        SOLUÇÕES
     ============================================================ */
@@ -463,7 +434,7 @@
 
     .servico-img {
       position: relative;
-      min-height: 440px;
+      min-height: 360px;
       overflow: hidden;
     }
     .servico-img img {
@@ -496,7 +467,7 @@
     }
 
     .servico-body {
-      padding: 3.5rem 3.5rem 3.5rem 4rem;
+      padding: 3rem 3rem 3rem 3.25rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -507,7 +478,7 @@
       order: -1;
       border-left: none;
       border-right: 1px solid var(--border);
-      padding: 3.5rem 4rem 3.5rem 3.5rem;
+      padding: 3rem 3.25rem 3rem 3rem;
     }
 
     .servico-num {
@@ -571,6 +542,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
+      justify-items: center;
     }
 
     .card-equipe {
@@ -578,6 +550,7 @@
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
       overflow: hidden;
+      width: min(100%, 340px);
       transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
     }
     .card-equipe:hover {
@@ -587,7 +560,7 @@
     }
     .card-photo {
       position: relative;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 4 / 5;
       overflow: hidden;
     }
     .card-photo img {
@@ -736,6 +709,7 @@
     @media (max-width: 860px) {
       .historia-grid { grid-template-columns: 1fr; gap: 3rem; }
       .historia-visual { max-width: 460px; }
+      .historia-img { max-width: 100%; }
       .servico { grid-template-columns: 1fr; }
       .servico-body,
       .servico.rev .servico-body {
@@ -744,13 +718,13 @@
         border-top: 1px solid var(--border);
         padding: 2.5rem 1.75rem;
       }
-      .servico-img { min-height: 300px; }
+      .servico-img { min-height: 260px; }
     }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .burger { display: flex; }
-      .hero-body { flex-direction: column; gap: 2.5rem; padding: 5rem 0 4rem; }
+      .hero-body { flex-direction: column; gap: 2.25rem; padding: 4rem 0 3rem; }
       .hero-logo-col { text-align: center; }
       .hero-logo-col img { width: 150px; margin: 0 auto; }
       .equipe-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
@@ -871,9 +845,8 @@
             <p>Dmitrasinovic, Neves e Silva Sociedade de Advogados é um escritório especializado em empresas, que visa potencializar o crescimento do negócio de seus clientes, transformando desafios em soluções, com segurança jurídica.</p>
             <p>Após atuarmos em escritórios tradicionais da cidade de Bragança Paulista, compreendemos a necessidade urgente de trazer renovo e modernidade à advocacia do interior.</p>
             <p>Para nós, a modernização vai além da implementação de tecnologias, mas por uma nova maneira de enxergar as funções do advogado, principalmente pela forma que se comunica e suas entregas.</p>
-            <p>Na nossa advocacia, transformamos complexidade em praticidade, garantindo a real compreensão dos direitos e obrigações, possibilitando à empresa se dedicar com tranquilidade apenas no crescimento do seu negócio.</p>
-            <p>Entender ao máximo a atividade que a empresa desempenha e suas particularidades nos permite agir de forma preventiva, evitando riscos desnecessários.</p>
-            <p>Desejamos nos tornar um jurídico que seja visto como um parceiro do negócio, diante das estratégias comerciais e objetivos da empresa.</p>
+            <p>Reunimos a expertise de três sócias com perfis complementares, mas unidas por um mesmo propósito: o olhar humanizado. Por trás de cada demanda, existe uma história. E por trás de cada empresa, há anos de dedicação, escolhas difíceis e sacrifícios feitos para construir algo que vai além do lucro: um legado.</p>
+            <p>É por isso que, para nós, nenhuma empresa é apenas um CNPJ: é o resultado do esforço de pessoas que acreditaram e decidiram fazer acontecer todos os dias.</p>
           </div>
 
           <div class="tabs-nav" role="tablist">
@@ -887,10 +860,10 @@
               <p>Oferecer soluções jurídicas personalizadas e inovadoras para empresas, atuando de forma preventiva e estratégica, com foco no crescimento e na segurança do negócio dos nossos clientes.</p>
             </div>
             <div class="tab-panel" id="tab-visao" role="tabpanel">
-              <p>Ser reconhecidas como parceiras estratégicas dos nossos clientes, referência em advocacia empresarial inovadora no interior de São Paulo, unindo excelência técnica e comunicação clara.</p>
+              <p>Ser reconhecido como parceiro estratégico de empresas, consolidando-se como referência em advocacia empresarial, com excelência técnica, inovação e comunicação clara.</p>
             </div>
             <div class="tab-panel" id="tab-valores" role="tabpanel">
-              <p>Integridade, comprometimento, inovação, clareza na comunicação, excelência técnica e parceria verdadeira com os clientes — esses são os pilares que guiam cada decisão do nosso escritório.</p>
+              <p>Honestidade, ética, comprometimento, clareza na comunicação, excelência técnica e parceria verdadeira com os clientes — esses são os pilares que guiam cada decisão do nosso escritório.</p>
             </div>
           </div>
         </div>
@@ -898,13 +871,9 @@
         <!-- Imagem -->
         <div class="historia-visual" data-anim data-delay="2">
           <div class="historia-img">
-            <img src="../assets-site-instucional/772e2a_be5ce15de7df4d658d72438f710dfa9a~mv2.avif"
-                 alt="Escritório DNS Advogados — ambiente corporativo"
+            <img src="../assets-site-instucional/LogoSemFundo-06_edited.png"
+                 alt="Logo Dmitrasinovic, Neves e Silva Sociedade de Advogados"
                  loading="lazy">
-          </div>
-          <div class="historia-badge">
-            <strong>2024</strong>
-            <span>Fundação do Escritório</span>
           </div>
         </div>
 
@@ -924,17 +893,17 @@
       </div>
     </div>
 
-    <!-- 01 · Assessoria Cível Empresarial -->
+    <!-- 01 · Assessoria Cível e Empresarial -->
     <div class="servico" data-anim>
       <div class="servico-img">
         <img src="../assets-site-instucional/Image by Samson.avif"
-             alt="Assessoria Cível Empresarial" loading="lazy">
+             alt="Assessoria Cível e Empresarial" loading="lazy">
         <div class="servico-img-overlay"></div>
-        <div class="servico-img-tag">Assessoria Cível Empresarial</div>
+        <div class="servico-img-tag">Assessoria Cível e Empresarial</div>
       </div>
       <div class="servico-body">
-        <p class="servico-num">01 — Serviço</p>
-        <h3 class="servico-title">Assessoria Cível Empresarial</h3>
+        <p class="servico-num">01 — SOLUÇÃO:</p>
+        <h3 class="servico-title">Assessoria Cível e Empresarial</h3>
         <ul class="servico-list">
           <li>Análise e gestão dos contratos vigentes e apontamentos de riscos;</li>
           <li>Elaboração de contratos e demais documentos jurídicos;</li>
@@ -953,7 +922,7 @@
         <div class="servico-img-tag">Assessoria Trabalhista</div>
       </div>
       <div class="servico-body">
-        <p class="servico-num">02 — Serviço</p>
+        <p class="servico-num">02 — SOLUÇÃO:</p>
         <h3 class="servico-title">Assessoria Trabalhista</h3>
         <ul class="servico-list">
           <li>Elaboração e revisão de contratos trabalhistas e demais documentos jurídicos;</li>
@@ -975,7 +944,7 @@
         <div class="servico-img-tag">Construção Civil</div>
       </div>
       <div class="servico-body">
-        <p class="servico-num">03 — Serviço</p>
+        <p class="servico-num">03 — SOLUÇÃO:</p>
         <h3 class="servico-title">Construção Civil</h3>
         <ul class="servico-list">
           <li>Contrato de Empreitada;</li>
@@ -998,13 +967,13 @@
         <div class="servico-img-tag">Cobrança de Inadimplentes</div>
       </div>
       <div class="servico-body">
-        <p class="servico-num">04 — Serviço</p>
+        <p class="servico-num">04 — SOLUÇÃO:</p>
         <h3 class="servico-title">Cobrança de Inadimplentes</h3>
         <ul class="servico-list">
           <li>Análise da carteira de inadimplentes e viabilidade da cobrança;</li>
-          <li>Elaboração personalizada de um procedimento de cobrança;</li>
+          <li>Elaboração personalizada de procedimento de cobrança;</li>
           <li>Atuação extrajudicial (tentativa amigável para recuperação do crédito);</li>
-          <li>Atuação judicial com as ações de cobrança.</li>
+          <li>Atuação judicial para recuperação de crédito.</li>
         </ul>
       </div>
     </div>
@@ -1018,7 +987,7 @@
         <div class="servico-img-tag">Legal Design e Visual Law</div>
       </div>
       <div class="servico-body">
-        <p class="servico-num">05 — Serviço</p>
+        <p class="servico-num">05 — SOLUÇÃO:</p>
         <h3 class="servico-title">Legal Design e Visual Law</h3>
         <p class="servico-desc">Com objetivo de levar acessibilidade à comunicação de serviços jurídicos, desenvolvemos os documentos da sua empresa com inovação, por meio da utilização de técnicas de legal design e visual law.</p>
       </div>
@@ -1076,7 +1045,7 @@
           <div class="card-info">
             <p class="card-name">Dra. Daniela Dmitrasinovic</p>
             <p class="card-role">Cível · Empresarial · Contratual</p>
-            <p class="card-bio">Sócia nominal, atuante nas áreas Cível, Empresarial e Contratual. Pós-graduanda em Contratos, Execução Contratual e Responsabilidade Civil.</p>
+            <p class="card-bio">Sócia nominal, atuante nas áreas Cível, Empresarial e Contratual. Especialista em Contratos, Execução Contratual e Responsabilidade Civil. Pós-graduanda em Direito Penal Econômico.</p>
           </div>
         </div>
 
