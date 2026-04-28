@@ -275,7 +275,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('../assets-site-instucional/772e2a_28938a08881e48f29b0d76a771076e9b~mv2.avif');
+      background-image: url('assets-site-instucional/772e2a_28938a08881e48f29b0d76a771076e9b~mv2.avif');
       background-size: cover;
       background-position: center 30%;
     }
@@ -335,7 +335,7 @@
       padding: 7rem 0 8rem;
       background:
         linear-gradient(180deg, rgba(9,9,9,.9) 0%, rgba(9,9,9,.93) 100%),
-        url('../assets-site-instucional/772e2a_72f5c216a9174e91b88f834b060cde91~mv2.avif');
+        url('assets-site-instucional/772e2a_72f5c216a9174e91b88f834b060cde91~mv2.avif');
       background-size: cover;
       background-position: center;
     }
@@ -415,8 +415,15 @@
     ============================================================ */
     .s-solucoes {
       padding: 7rem 0 0;
-      background: var(--bg-alt);
+      background: #f5f3ef;
     }
+    .s-solucoes .label {
+      color: #8f6f38;
+      border-color: rgba(143,111,56,0.35);
+      background: rgba(255,255,255,0.65);
+    }
+    .s-solucoes .h2 { color: #111111; }
+    .s-solucoes .lead { color: #4d4d4d; }
     .solucoes-head {
       text-align: center;
       max-width: 680px;
@@ -428,9 +435,9 @@
     .servico {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
-    .servico:last-child { border-bottom: 1px solid var(--border); }
+    .servico:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
 
     .servico-img {
       position: relative;
@@ -471,13 +478,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: var(--bg-card);
-      border-left: 1px solid var(--border);
+      background: #ffffff;
+      border-left: 1px solid rgba(0,0,0,0.08);
     }
     .servico.rev .servico-body {
       order: -1;
       border-left: none;
-      border-right: 1px solid var(--border);
+      border-right: 1px solid rgba(0,0,0,0.08);
       padding: 3rem 3.25rem 3rem 3rem;
     }
 
@@ -493,13 +500,13 @@
       font-family: var(--ff-serif);
       font-size: 1.55rem;
       font-weight: 600;
-      color: var(--white);
+      color: #111111;
       margin-bottom: 1.25rem;
       line-height: 1.3;
     }
     .servico-desc {
       font-size: 0.9rem;
-      color: var(--text-2);
+      color: #4d4d4d;
       line-height: 1.8;
       margin-bottom: 1.25rem;
     }
@@ -513,7 +520,7 @@
       align-items: flex-start;
       gap: 0.65rem;
       font-size: 0.875rem;
-      color: var(--text-2);
+      color: #3f3f3f;
       line-height: 1.55;
     }
     .servico-list li::before {
@@ -531,8 +538,14 @@
     ============================================================ */
     .s-equipe {
       padding: 7rem 0;
-      background: var(--bg);
+      background: #ffffff;
     }
+    .s-equipe .label {
+      color: #8f6f38;
+      border-color: rgba(143,111,56,0.35);
+      background: #f8f6f2;
+    }
+    .s-equipe .h2 { color: #111111; }
     .equipe-head {
       text-align: center;
       margin-bottom: 4rem;
@@ -546,8 +559,8 @@
     }
 
     .card-equipe {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.1);
       border-radius: var(--r-lg);
       overflow: hidden;
       width: min(100%, 285px);
@@ -555,8 +568,8 @@
     }
     .card-equipe:hover {
       transform: translateY(-7px);
-      box-shadow: 0 24px 64px rgba(0,0,0,.55);
-      border-color: var(--border-g);
+      box-shadow: 0 20px 52px rgba(0,0,0,.18);
+      border-color: rgba(143,111,56,0.45);
     }
     .card-photo {
       position: relative;
@@ -582,18 +595,18 @@
     }
     .card-info {
       padding: 1.4rem 1.5rem 1.6rem;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(0,0,0,0.1);
     }
     .card-name {
       font-family: var(--ff-serif);
       font-size: 1.08rem;
       font-weight: 600;
-      color: var(--white);
+      color: #111111;
       margin-bottom: 0.3rem;
     }
     .card-role {
       font-size: 0.72rem;
-      color: var(--gold);
+      color: #8f6f38;
       text-transform: uppercase;
       letter-spacing: 0.09em;
       font-weight: 500;
@@ -601,7 +614,7 @@
     }
     .card-bio {
       font-size: 0.92rem;
-      color: #b8b8b8;
+      color: #4d4d4d;
       line-height: 1.72;
       margin-top: 0.65rem;
     }
@@ -773,7 +786,7 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#topo" class="nav-logo" aria-label="DNS Advogados – Início">
-          <img src="../LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
+          <img src="LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
         </a>
         <div class="nav-links">
           <a href="#historia">Nossa História</a>
@@ -807,7 +820,7 @@
       <div class="hero-body">
 
         <div class="hero-logo-col" data-anim>
-          <img src="../LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
+          <img src="LogoSemFundo-04.png" alt="Dmitrasinovic, Neves e Silva Sociedade de Advogados">
         </div>
 
         <div class="hero-copy" data-anim data-delay="1">
@@ -871,7 +884,7 @@
         <!-- Imagem -->
         <div class="historia-visual" data-anim data-delay="2">
           <div class="historia-img">
-            <img src="../assets-site-instucional/LogoSemFundo-06_edited.png"
+            <img src="assets-site-instucional/LogoSemFundo-06_edited.png"
                  alt="Logo Dmitrasinovic, Neves e Silva Sociedade de Advogados"
                  loading="lazy">
           </div>
@@ -896,7 +909,7 @@
     <!-- 01 · Assessoria Cível e Empresarial -->
     <div class="servico" data-anim>
       <div class="servico-img">
-        <img src="../assets-site-instucional/Image by Samson.avif"
+        <img src="assets-site-instucional/Image by Samson.avif"
              alt="Assessoria Cível e Empresarial" loading="lazy">
         <div class="servico-img-overlay"></div>
         <div class="servico-img-tag">Assessoria Cível e Empresarial</div>
@@ -916,7 +929,7 @@
     <!-- 02 · Assessoria Trabalhista -->
     <div class="servico rev" data-anim>
       <div class="servico-img">
-        <img src="../assets-site-instucional/view-worker-grinding-piece-metal.avif"
+        <img src="assets-site-instucional/view-worker-grinding-piece-metal.avif"
              alt="Assessoria Trabalhista" loading="lazy">
         <div class="servico-img-overlay"></div>
         <div class="servico-img-tag">Assessoria Trabalhista</div>
@@ -938,7 +951,7 @@
     <!-- 03 · Construção Civil -->
     <div class="servico" data-anim>
       <div class="servico-img">
-        <img src="../assets-site-instucional/WhatsApp Image 2024-08-20 at 13_03_52.avif"
+        <img src="assets-site-instucional/WhatsApp Image 2024-08-20 at 13_03_52.avif"
              alt="Construção Civil" loading="lazy">
         <div class="servico-img-overlay"></div>
         <div class="servico-img-tag">Construção Civil</div>
@@ -961,7 +974,7 @@
     <!-- 04 · Cobrança de Inadimplentes -->
     <div class="servico rev" data-anim>
       <div class="servico-img">
-        <img src="../assets-site-instucional/calculator-money-pencil-closeup-blurred-background.avif"
+        <img src="assets-site-instucional/calculator-money-pencil-closeup-blurred-background.avif"
              alt="Cobrança de Inadimplentes" loading="lazy">
         <div class="servico-img-overlay"></div>
         <div class="servico-img-tag">Cobrança de Inadimplentes</div>
@@ -981,7 +994,7 @@
     <!-- 05 · Legal Design e Visual Law -->
     <div class="servico" data-anim>
       <div class="servico-img">
-        <img src="../assets-site-instucional/abstract-glowing-flame-drops-electric-illumination-generative-ai.avif"
+        <img src="assets-site-instucional/abstract-glowing-flame-drops-electric-illumination-generative-ai.avif"
              alt="Legal Design e Visual Law" loading="lazy">
         <div class="servico-img-overlay"></div>
         <div class="servico-img-tag">Legal Design e Visual Law</div>
@@ -1010,7 +1023,7 @@
         <!-- Caroline -->
         <div class="card-equipe" data-anim>
           <div class="card-photo">
-            <img src="../assets-site-instucional/Dra. Caroline Silva.avif"
+            <img src="assets-site-instucional/Dra. Caroline Silva.avif"
                  alt="Dra. Caroline Silva" loading="lazy">
             <div class="card-photo-grad" aria-hidden="true"></div>
           </div>
@@ -1024,7 +1037,7 @@
         <!-- Charlotte -->
         <div class="card-equipe" data-anim data-delay="1">
           <div class="card-photo">
-            <img src="../assets-site-instucional/Dra. Charlotte Neves.avif"
+            <img src="assets-site-instucional/Dra. Charlotte Neves.avif"
                  alt="Dra. Charlotte Neves" loading="lazy">
             <div class="card-photo-grad" aria-hidden="true"></div>
           </div>
@@ -1038,7 +1051,7 @@
         <!-- Daniela -->
         <div class="card-equipe" data-anim data-delay="2">
           <div class="card-photo">
-            <img src="../assets-site-instucional/Dra. Daniela Dmitrasinovic.avif"
+            <img src="assets-site-instucional/Dra. Daniela Dmitrasinovic.avif"
                  alt="Dra. Daniela Dmitrasinovic" loading="lazy">
             <div class="card-photo-grad" aria-hidden="true"></div>
           </div>
@@ -1064,7 +1077,7 @@
         <div data-anim>
           <p class="footer-col-label">Contato</p>
           <div class="footer-logo">
-            <img src="../LogoSemFundo-04.png" alt="DNS Advogados">
+            <img src="LogoSemFundo-04.png" alt="DNS Advogados">
           </div>
           <p class="footer-blurb">Inovadoras em Soluções Jurídicas.<br>Bragança Paulista, SP.</p>
           <a href="https://wa.me/551122771072?text=Olá!%20Gostaria%20de%20falar%20com%20um%20advogado."
